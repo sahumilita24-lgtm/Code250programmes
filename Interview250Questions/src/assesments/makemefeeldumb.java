@@ -4,20 +4,22 @@ public class makemefeeldumb {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		// find second max number
-		int[] input = { 10, 45, 22, 89, 67 };
-		int max = input[0];
-		int secondmax =  Integer.MIN_VALUE;
-		for (int i = 0; i < input.length; i++) {
-			if (input[i] > max) {
-				secondmax = max;
-				max = input[i];
+		// count eac character
 
-			} else if (input[i] > secondmax && input[i] < max) {
-				secondmax = input[i];
+		String input = "java";
+		char[] inputarray = input.toCharArray();
+		for (int i = 0; i < input.length(); i++) {
+			int count = 0;
+			for (int j = 0; j < input.length(); j++) {
+				if (inputarray[i] == inputarray[j]) {
+					count++;
+				}
+
+			}
+			if (input.indexOf(inputarray[i]) == i) {
+				System.out.println(inputarray[i] + " = " + count);
 			}
 		}
-		System.out.println(secondmax);
 
 	}
 
